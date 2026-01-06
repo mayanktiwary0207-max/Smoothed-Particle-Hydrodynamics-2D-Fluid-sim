@@ -215,7 +215,7 @@ def main():
     for frame in range(TOTAL_FRAMES):
         sim.update(dt)
 
-        surface.fill((0, 0, 0))
+        surface.fill((255, 255, 255))
         sim.draw(surface)
 
         # Convert surface → array (H, W, 3)
@@ -230,14 +230,14 @@ def main():
     print("Saving mp4...")
 
     imageio.mimsave(
-        "sph_simulation.mp4",
+        "sph_simulation_white_bg.mp4",
         frames,
         fps=60,
         codec="libx264"
     )
 
     pygame.quit()
-    print("Saved sph_simulation.mp4")
+    print("Saved sph_simulation_white_bg.mp4")
 
 
 
